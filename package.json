@@ -1,0 +1,24 @@
+{
+  "name": "monitor-breaches-axios",
+  "version": "1.0.0",
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bugs": {
+    "url": "https://github.com/pdehaan/monitor-breaches-axios/issues"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "ms": "2.1.1"
+  },
+  "homepage": "https://github.com/pdehaan/monitor-breaches-axios#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/monitor-breaches-axios.git"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
