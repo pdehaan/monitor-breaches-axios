@@ -2,6 +2,7 @@
   "name": "monitor-breaches-axios",
   "version": "1.0.0",
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "bin": "index.js",
   "bugs": {
     "url": "https://github.com/pdehaan/monitor-breaches-axios/issues"
   },
