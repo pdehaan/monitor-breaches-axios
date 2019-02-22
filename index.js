@@ -2,6 +2,8 @@
 
 const {getBreaches} = require("./lib");
 
+const argv = process.argv.slice(2);
+
 async function main(count=20) {
   const {avgDiff, breaches} = await getBreaches();
 
@@ -28,4 +30,5 @@ async function main(count=20) {
   console.log(`\n\nAvg breach->added: ${avgDiff.toFixed(2)}d`);
 }
 
-main();
+
+main(...argv);
