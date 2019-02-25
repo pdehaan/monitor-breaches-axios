@@ -11,7 +11,7 @@ const client = axios.create({
 
 async function getBreaches(apiPath = "/hibp/breaches") {
   let avgDiff = 0;
-  const {data: breaches} = await client.get(apiPath, {
+  const { data: breaches } = await client.get(apiPath, {
     transformResponse(data) {
       const breaches = JSON.parse(data);
       return breaches.map(breach => {
@@ -20,7 +20,10 @@ async function getBreaches(apiPath = "/hibp/breaches") {
         if (breach.ModifiedDate) {
           breach.ModifiedDate = new Date(breach.ModifiedDate);
         }
-        breach.AddedDiff = parseInt(ms(breach.AddedDate - breach.BreachDate), 10);
+        breach.AddedDiff = parseInt(
+          ms(breach.AddedDate - breach.BreachDate),
+          10
+        );
         breach.LogoPath = new URL(
           `/img/logos/${breach.LogoPath}`,
           baseURL
