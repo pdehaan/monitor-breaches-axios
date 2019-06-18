@@ -3,13 +3,17 @@ const { URL } = require("url");
 const axios = require("axios");
 const ms = require("ms");
 
-const baseURL = "https://fx-breach-alerts.herokuapp.com/";
+// const baseURL = "https://fx-breach-alerts.herokuapp.com/";
+const baseURL = "https://haveibeenpwned.com/";
 
 const client = axios.create({
-  baseURL
+  baseURL,
+  headers: {
+    "User-Agent": "hibp-date-diff/1.0.0"
+  }
 });
 
-async function getBreaches(apiPath = "/hibp/breaches") {
+async function getBreaches(apiPath = "/api/v2/breaches") {
   let avgDiff = 0;
   const { data: breaches } = await client.get(apiPath, {
     transformResponse(data) {
